@@ -83,8 +83,9 @@ const int wakeTimes[][4] = {
 {5, 30,  19, 30} ,
 // Nov
 // End times where BST is active 
-{6, 59,  16, 37},
-{7, 50,  16, 04},    
+{5, 30,  17, 30} ,
+{5, 30,  18, 30} ,
+
 };
 
 // Time delta - smallest resolution of alarm is 1 minute
@@ -114,7 +115,7 @@ void setup()
   // Default the clock to the time this was compiled.
   // Comment out if the clock is set by other means
   // ...get the date and time the compiler was run
-  if(true) {
+  if(false) {
     if (getDate(__DATE__) && getTime(__TIME__)) {
         // and configure the RTC with this info
         SleepyPi.setTime(DateTime(F(__DATE__), F(__TIME__)));
@@ -131,7 +132,6 @@ void setup()
   pinMode(in2Pin, OUTPUT);
   pinMode(enablePin, OUTPUT);
 
-  printTime(SleepyPi.readTime());
 
   
 }
