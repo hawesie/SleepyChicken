@@ -71,15 +71,18 @@ const int wakeTimes[][4] = {
 {7, 40, 16, 51},
 {6, 53,  17, 43}  ,
 {5, 43,  18, 37}  ,
-//Start times where BST is active, 
+// Start times where BST is active, 
 {3, 38,  18,  31},
 {2, 53,  19, 14},
 {2, 49, 21, 00},
 {2, 50,  20, 30} ,
 {3, 27,  19, 55} ,
-{5, 17,  19, 52}    ,
-{6, 6,  18, 43} ,
-//End times where BST is active 
+// Sept
+{5, 30,  19, 30} ,
+// Oct
+{5, 30,  19, 30} ,
+// Nov
+// End times where BST is active 
 {6, 59,  16, 37},
 {7, 50,  16, 04},    
 };
@@ -111,10 +114,12 @@ void setup()
   // Default the clock to the time this was compiled.
   // Comment out if the clock is set by other means
   // ...get the date and time the compiler was run
-  if (getDate(__DATE__) && getTime(__TIME__)) {
-      // and configure the RTC with this info
-      SleepyPi.setTime(DateTime(F(__DATE__), F(__TIME__)));
-  }  
+  if(true) {
+    if (getDate(__DATE__) && getTime(__TIME__)) {
+        // and configure the RTC with this info
+        SleepyPi.setTime(DateTime(F(__DATE__), F(__TIME__)));
+    }  
+  }
   
   // Configure "Standard" LED pin
   pinMode(LED_PIN, OUTPUT);		
@@ -125,6 +130,8 @@ void setup()
   pinMode(in1Pin, OUTPUT);
   pinMode(in2Pin, OUTPUT);
   pinMode(enablePin, OUTPUT);
+
+  printTime(SleepyPi.readTime());
 
   
 }
