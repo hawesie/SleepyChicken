@@ -68,12 +68,12 @@ const int SPEED = 255;
 
 // All times GMT, no BST changes
 const int wakeTimes[][4] = {
-{7, 40, 16, 51},
-{6, 53,  17, 43}  ,
-{5, 43,  18, 37}  ,
+{5, 30,  17, 30} ,
+{5, 30,  17, 30} ,
+{5, 30,  17, 30} ,
 // Start times where BST is active, 
 {3, 38,  18,  31},
-{2, 53,  19, 14},
+{2, 53,  21, 55},
 {2, 49, 21, 00},
 {2, 50,  20, 30} ,
 {3, 27,  19, 55} ,
@@ -84,7 +84,8 @@ const int wakeTimes[][4] = {
 // Nov
 // End times where BST is active 
 {5, 30,  17, 30} ,
-{5, 30,  18, 30} ,
+// Dec
+{5, 30,  17, 30} ,
 
 };
 
